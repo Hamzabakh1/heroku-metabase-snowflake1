@@ -1,0 +1,9 @@
+build:
+  docker:
+    web:
+      dockerfile: Dockerfile
+      args:
+        METABASE_VERSION: "v0.54.8.x"
+        JAVA_TOOL_OPTIONS: "-Xmx300m"
+run:
+  web: /app/docker-entrypoint.sh
