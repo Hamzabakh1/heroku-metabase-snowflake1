@@ -1,9 +1,9 @@
 # Use a specific stable Metabase OSS version to avoid migrations mismatch
-FROM metabase/metabase:v0.54.9.x
+FROM metabase/metabase:v0.54.10.x
 
 # Metadata
 LABEL maintainer="Hamza Bakh <email>"
-LABEL version="v0.54.9.x"
+LABEL version="v0.54.10.x"
 
 # Switch to root to install driver
 USER root

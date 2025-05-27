@@ -1,12 +1,13 @@
 build:
   docker:
-    web: Dockerfile
-  config:
-    METABASE_VERSION: "v0.54.9.x"  
-    JAVA_TOOL_OPTIONS: "-Xmx300m"
+    web:
+      dockerfile: Dockerfile
+      args:
+        METABASE_VERSION: "v0.54.10.x"
+        JAVA_TOOL_OPTIONS: "-Xmx300m"
 
 run:
-  web: bash /app/docker-entrypoint.sh
+  web: /app/docker-entrypoint.sh
 
 release:
   command:
