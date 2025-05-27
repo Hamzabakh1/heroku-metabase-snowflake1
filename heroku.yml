@@ -1,9 +1,13 @@
 build:
   docker:
-    web:
-      dockerfile: Dockerfile
-      args:
-        METABASE_VERSION: "v0.54.8.x"
-        JAVA_TOOL_OPTIONS: "-Xmx300m"
+    web: Dockerfile
+  config:
+    METABASE_VERSION: "v0.54.9.x"  
+    JAVA_TOOL_OPTIONS: "-Xmx300m"
+
 run:
-  web: /app/docker-entrypoint.sh
+  web: bash /app/docker-entrypoint.sh
+
+release:
+  command:
+    - echo "Release phase: no actions defined"
